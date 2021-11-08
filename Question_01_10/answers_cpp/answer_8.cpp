@@ -16,8 +16,8 @@ cv::Mat max_pooling(cv::Mat img){
   int r = 8;
   double v = 0;
   
-  for (int y = 0; y < height; y+=r){
-    for (int x = 0; x < width; x+=r){
+  for (int y = 0; y < height-r; y+=r){
+    for (int x = 0; x < width-r; x+=r){
       for (int c = 0; c < channel; c++){
         v = 0;
         for (int dy = 0; dy < r; dy++){
